@@ -40,16 +40,15 @@
         console.log(response);
 
         // Transfer content to HTML
-        $(".city").html("<h1>" + response.name + " Weather Details</h1>");
+        $(".city").html("<h1>Current " + response.name + " Weather </h1>");
         // added this part to city class div, description of the weather overall, i think its important one
-        $(".description").text("General weather description: " + response.weather[0].description);
-
-        $(".wind").text("Wind Speed: " + response.wind.speed);
+        $(".description").html("<h3>" + response.weather[0].description + "</h3>");
+        $(".wind").text("Wind Speed (MPH): " + response.wind.speed);
         $(".humidity").text("Humidity: " + response.main.humidity);
-        $(".temp").text("Temperature (F) " + response.main.temp);
+        $(".temp").text("Temperature (F): " + response.main.temp);
         // also added these to divs i added
-        $(".tempmin").text("Temperature min (F): " + response.main.temp_min);
-        $(".tempmax").text("Temperature max (F): " + response.main.temp_max);
+        $(".tempmin").text("Low Temperature (F): " + response.main.temp_min);
+        $(".tempmax").text("High Temperature (F): " + response.main.temp_max);
 
 
 
