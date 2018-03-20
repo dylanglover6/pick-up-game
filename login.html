@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Login Page</title>
+  </head>
+  <body>
+    
+    <div class="container">
+
+      <br>
+  
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1 class="text-center">HoopNow</h1>
+        <h3 class="text-center">Play Basketball. Make Friends. Hoop Now.</h3>
+      </div>
+  
+      <div class="row">
+  
+        <!-- Sign-Up card-->
+        <div class="col-md-6 col-xs-12">
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">Sign-in</h3>
+            </div>
+            <div class="card-body">
+  
+              <!-- Sign-up Form (note the various input "types")-->
+              <form role="form">
+                <div class="form-group">
+                  <label for="name-input">Name:</label>
+                  <input class="form-control" id="name-input" type="text">
+                </div>
+                <div class="form-group">
+                  <label for="email-input">Email:</label>
+                  <input class="form-control" id="email-input" type="email">
+                </div>
+                <div class="form-group">
+                  <label for="age-input">Password</label>
+                  <input class="form-control" id="password-input" type="text">
+                </div>
+      
+                <button class="btn btn-default" id="find-game" type="submit">Find a Game</button>
+                <button class="btn btn-default" id="host-game" type="submit">Host a Game</button>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Most Recent Member card -->
+        <div class="col-md-6 col-xs-12">
+          <div class="card card-default">
+            <div class="card-header">
+              <h3 class="card-title">About HoopNow</h3>
+            </div>
+            <div class="card-body" id="recent-member">
+              <h4 id="name-display">Go Play Now!</h4>
+              <p id="comment-display">This app allows the user to instantly connect with fellow basketball players in their local area to start pick-up games of basketball anytime, anywhere!</p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+
+   <!-- jQuery -->.
+   <script src="https://code.jquery.com/jquery.js"></script>
+   <script src="./assets/javascript/game.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
