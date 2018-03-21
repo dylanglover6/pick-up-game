@@ -10,11 +10,11 @@
     // This is our API key 
     var APIKey = "166a433c57516f51dfab1f7edaed8413";
     // will be from text input, default to USA only for now 
-    var city = "Seattle";
-    // latittude input from userlocation -- this example is for Miami 
-    var lat = 25.7617;
+    var city = "";
+    // latittude input from userlocation -- this example is for Austin 
+    var lat = 30.287686;
     // longitude input from userlocation
-    var lon = -80.1918;
+    var lon = -97.736417;
 
 
     // separated from city-string input queryURLTWO bc if city exists, and lat and lon, lat and lon dont work-- defaults to city-string
@@ -23,6 +23,11 @@
     // rename to queryURL to test that it pulls city string correctly instead of lat and lon, 
     var queryURLTWO = "https://api.openweathermap.org/data/2.5/weather?q=" + city + ",us&units=imperial&appid=" + APIKey;
 
+    // capitalize function
+    function capitalize(s)
+{
+    return s[0].toUpperCase() + s.slice(1);
+};
 
     // Here we run our AJAX call to the OpenWeatherMap API
     $.ajax({
@@ -42,7 +47,7 @@
         // Transfer content to HTML
         $(".city").html("<h1>Current " + response.name + " Weather </h1>");
         // added this part to city class div, description of the weather overall, i think its important one
-        $(".description").html("<h3>" + response.weather[0].description + "</h3>");
+        $(".description").html("<h3>" + capitalize(response.weather[0].description) + "</h3>");
         $(".wind").text("Wind Speed (MPH): " + response.wind.speed);
         $(".humidity").text("Humidity: " + response.main.humidity);
         $(".temp").text("Temperature (F): " + response.main.temp);
