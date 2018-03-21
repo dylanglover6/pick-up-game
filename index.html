@@ -6,18 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
 
     <title>Map Page</title>
   </head>
   <body>
-    <div class="container">
-      
-      <div class="jumbotron">
-        <h1 class="text-center">Play Now!</h1>
-      </div>
-      
+    <!-- NavBar -->
+    <nav class="navbar navbar-light"  style="background-color: #6a9fc2">
+      <span class="navbar-brand mb-0 h1" style="color: #ffb75c">HoopNow</span>
+      <form class="form-inline">
+        <button type="button" style="background-color: #ec6334; border:#ffb75c; margin: 5px;" id="new-game-btn" class="btn btn-primary">
+          Host a New Game
+        </button> 
+
+        <button type="button" style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal">
+          View Current Weather
+        </button>
+      </form>
+    </nav>
+    
+    <div class="container">  
       <div class="row">
         <div class="col-md-12 col-xs-12">
           <div class="card">
@@ -32,9 +42,6 @@
       </div>
      
 
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal">
-          View Current Weather
-      </button>
         
         <!-- Modal -->
         <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="weatherModalLabel" aria-hidden="true">
@@ -48,7 +55,6 @@
               </div>
               <div class="modal-body">
                   <div class="description"></div>
-                  <div class="icon"></div>
                   <div class="wind"></div>
                   <div class="temp"></div>
                   <div class="tempmin"></div>
@@ -67,6 +73,6 @@
    <script src="./openweather.js"></script>
    <script src="./assets/javascript/game.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
