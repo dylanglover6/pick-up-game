@@ -8,9 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+
     <!-- FontAwesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
     <title>Login Page</title>
   </head>
@@ -21,19 +22,21 @@
       <br>
   
       <!-- Jumbotron -->
-      <div class="jumbotron">
-        <i class="fas fa-basketball-ball"></i>
-        <h1 class="text-center">HoopNow</h1>
-        <h3 class="text-center">Play Basketball. Make Friends. Hoop Now.</h3>
+      <div class="jumbotron" style="background-color: #6a9fc2">
+          <div class="text-center" style="color:#ec6334">
+            <i class="fas fa-basketball-ball fa-3x" ></i>
+          </div>          
+        <h1 class="text-center" style="color: #ffb75c;">HoopNow</h1>
+        <h3 class="text-center" style="color: #ffb75c;">Play Basketball. Make Friends. Hoop Now.</h3>
       </div>
   
       <div class="row">
   
         <!-- Sign-Up card-->
         <div class="col-md-6 col-xs-12">
-          <div class="card card-default">
-            <div class="card-header">
-              <h3 class="card-title">Sign-in</h3>
+          <div class="card card-default" >
+            <div class="card-header" style="background-color: #6a9fc2">
+              <h3 class="card-title" style="color: #ffb75c;">Sign-in</h3>
             </div>
             <div class="card-body">
   
@@ -48,22 +51,22 @@
                   <input class="form-control" id="email-input" type="email">
                 </div>
                 <div class="form-group">
-                  <label for="age-input">Password</label>
+                  <label for="age-input">Password:</label>
                   <input class="form-control" id="password-input" type="text">
                 </div>
       
-                <button class="btn btn-default" id="find-game-btn" type="submit">Find a Game</button>
-                <button class="btn btn-default" id="host-game-btn" type="submit">Host a Game</button>
+                <button style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" id="find-game-btn" type="submit">Find a Game</button>
+                <button style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" id="host-game-btn" type="submit">Host a Game</button>
               </form>
             </div>
           </div>
         </div>
   
-        <!-- Most Recent Member card -->
+        <!-- App info card -->
         <div class="col-md-6 col-xs-12">
-          <div class="card card-default">
-            <div class="card-header">
-              <h3 class="card-title">About HoopNow</h3>
+          <div class="card card-default" >
+            <div class="card-header" style="background-color: #6a9fc2">
+              <h3 class="card-title" style="color: #ffb75c;">About HoopNow</h3>
             </div>
             <div class="card-body" id="recent-member">
               <h4 id="name-display">Go Play Now!</h4>
@@ -81,6 +84,6 @@
    <script src="https://code.jquery.com/jquery.js"></script>
    <script src="./assets/javascript/game.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
