@@ -3,8 +3,8 @@
     var city;
     // latitude and longitude placeholders to show weather for Austin  
     var lat = 30.287686;
-    var lon = -97.736417;
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=imperial&appid=" + APIKey;
+    var lng = -97.736417;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lng + "&units=imperial&appid=" + APIKey;
 
 
     // capitalize function
