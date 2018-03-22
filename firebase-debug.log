@@ -1,0 +1,41 @@
+[debug] [2018-03-22T23:44:13.821Z] ----------------------------------------------------------------------
+[debug] [2018-03-22T23:44:13.823Z] Command:       /usr/local/Cellar/node/9.4.0/bin/node /usr/local/bin/firebase serve
+[debug] [2018-03-22T23:44:13.823Z] CLI Version:   3.17.6
+[debug] [2018-03-22T23:44:13.823Z] Platform:      darwin
+[debug] [2018-03-22T23:44:13.823Z] Node Version:  v9.4.0
+[debug] [2018-03-22T23:44:13.825Z] Time:          Thu Mar 22 2018 18:44:13 GMT-0500 (CDT)
+[debug] [2018-03-22T23:44:13.825Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-03-22T23:44:13.833Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-03-22T23:44:13.833Z] > authorizing via signed-in user
+[debug] [2018-03-22T23:44:13.835Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-03-22T23:44:13.835Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/_Rg1IJ4qVhUMNdS0SrINY7GcsZIbRoTCKopwF6DFi-U',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Mar 22 2018 18:44:13 GMT-0500 (CDT)
+[debug] [2018-03-22T23:44:14.203Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-22T23:44:14.221Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/st-group-project  
+  
+ Thu Mar 22 2018 18:44:14 GMT-0500 (CDT)
+[debug] [2018-03-22T23:44:14.597Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-22T23:44:14.598Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/st-group-project/tokens  
+  
+ Thu Mar 22 2018 18:44:14 GMT-0500 (CDT)
+[debug] [2018-03-22T23:44:17.304Z] <<< HTTP RESPONSE 200
+[debug] [2018-03-22T23:44:17.305Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/st-group-project  
+  
+ Thu Mar 22 2018 18:44:17 GMT-0500 (CDT)
+[debug] [2018-03-22T23:44:17.831Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/manuelito/Firebase/pick-up-game'...
+[info] 
+[debug] [2018-03-22T23:44:17.834Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/265360412018/clients/_:getWebAppConfig  
+  
+ Thu Mar 22 2018 18:44:17 GMT-0500 (CDT)
+[debug] [2018-03-22T23:44:18.538Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
