@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Concert+One|Faster+One" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <title>Map Page</title>
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-light navbar-style"  style="background-color: #6a9fc2">
+      <span class="navbar-brand mb-0" style="color: #ffb75c; margin-left: 30px; font-family: 'Faster One', cursive;"><h1>HoopNow</h1></span>
+      <form class="form-inline">
+        <button type="button" style="background-color: #ec6334; border:#ffb75c; margin: 5px;" id="new-game-btn" class="btn btn-primary">
+          Host a New Game
+        </button> 
+
+        <button type="button" style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal">
+          View Current Weather
+        </button>
+      </form>
+    </nav>
+    
+    <div class="container">  
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="card" style="margin-top: 30px; border: #ec6334;">
+            <div class="card-header" style="background-color: #6a9fc2">
+              <h3 class="card-title" style="color: #ffb75c;">Games In Your Area</h3>
+            </div>
+            <div class="card-body" id="google-map">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="weatherModal" tabindex="-1" role="dialog" aria-labelledby="weatherModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="weatherModalLabel"><div class="city"></div></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="description"></div>
+                <div class="wind"></div>
+                <div class="temp"></div>
+                <div class="tempmin"></div>
+                <div class="tempmax"></div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+   <!-- jQuery -->
+   <script src="https://code.jquery.com/jquery.js"></script>
+   <script src="./assets/javascript/openweather.js"></script>
+   <script src="./assets/javascript/game.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
