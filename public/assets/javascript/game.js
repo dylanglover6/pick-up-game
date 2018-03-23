@@ -6,9 +6,16 @@ $("#find-game-btn").on("click", function(){
 });
 
 //Login Page Host Game Function
-$("#host-game-btn").on("click", function(){
+$("#btnSignUp").on("click", function(){
   event.preventDefault();
-  window.location.href = 'index.html'
+  //window.location.href = 'index.html'
   //insert function for loading map on index.html with location source
 });
+
+$("#btnLogin").on("click", function(){
+  event.preventDefault();
+  //window.location.href = 'index.html'
+  //insert function for loading map on index.html with location source
+});
+
 
