@@ -30,6 +30,19 @@
         //Sign In
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
+
+        //redirect to next page
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                console.log(firebaseUser);
+                window.location.href = 'index.html'
+                
+    
+            } else {
+                console.log('not logged in');
+               
+            }
+        });  
     });
 
     
@@ -49,17 +62,21 @@
         promise
 
             .catch(e => console.log(e.message));
+
+        //redirect to next page
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                console.log(firebaseUser);
+                window.location.href = 'index.html'
+                
+    
+            } else {
+                console.log('not logged in');
+               
+            }
+        });  
     });
 
     //Add a realtime listener
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            console.log(firebaseUser);
-            btnLogout.classList.remove('hide');
-
-        } else {
-            console.log('not logged in');
-            btnLogout.classList.add('hide');
-        }
-    });   
+      
 }());
