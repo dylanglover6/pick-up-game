@@ -16,6 +16,9 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
     
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
     <title>Login Page</title>
   </head>
   <body>
@@ -51,15 +54,16 @@
                 </div>
                 <div class="form-group">
                   <label for="email-input">Email:</label>
-                  <input class="form-control" id="email-input" type="email">
+                  <input class="form-control" id="txtEmail" type="email">
                 </div>
                 <div class="form-group">
                   <label for="age-input">Password:</label>
-                  <input class="form-control" id="password-input" type="text">
+                  <input class="form-control" id="txtPassword" type="text">
                 </div>
       
                 <button style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" id="find-game-btn" type="submit">Find a Game</button>
-                <button style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" id="host-game-btn" type="submit">Host a Game</button>
+                <button style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" id="btnSignUp" type="submit">Sign Up</button>
+                <button style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" id="btnLogin" type="submit">Log In</button>
               </form>
             </div>
           </div>
@@ -83,9 +87,10 @@
     </div>
   
 
-   <!-- jQuery -->.
+   <!-- jQuery and javascripts -->.
    <script src="https://code.jquery.com/jquery.js"></script>
    <script src="./assets/javascript/game.js"></script>
+   <script src="app.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
