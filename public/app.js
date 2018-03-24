@@ -1,15 +1,7 @@
 (function () {
 
     //Initialize Firebase    
-    const config = {
-        apiKey: "AIzaSyBdaBaHIZ1lf5cRCD_XT2cWo-akLUATqUY",
-        authDomain: "st-group-project.firebaseapp.com",
-        databaseURL: "https://st-group-project.firebaseio.com",
-        projectId: "st-group-project",
-        storageBucket: "st-group-project.appspot.com",
-        messagingSenderId: "265360412018"
-    };
-    firebase.initializeApp(config);
+   
 
     // Get element
     const txtEmail = document.getElementById('txtEmail');
@@ -30,6 +22,19 @@
         //Sign In
         const promise = auth.signInWithEmailAndPassword(email, pass);
         promise.catch(e => console.log(e.message));
+
+        //redirect to next page
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                console.log(firebaseUser);
+                window.location.href = 'index.html'
+                
+    
+            } else {
+                console.log('not logged in');
+               
+            }
+        });  
     });
 
     
@@ -49,17 +54,21 @@
         promise
 
             .catch(e => console.log(e.message));
+
+        //redirect to next page
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if (firebaseUser) {
+                console.log(firebaseUser);
+                window.location.href = 'index.html'
+                
+    
+            } else {
+                console.log('not logged in');
+               
+            }
+        });  
     });
 
     //Add a realtime listener
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            console.log(firebaseUser);
-            btnLogout.classList.remove('hide');
-
-        } else {
-            console.log('not logged in');
-            btnLogout.classList.add('hide');
-        }
-    });   
+      
 }());
