@@ -1,15 +1,7 @@
 (function () {
 
     //Initialize Firebase    
-    const config = {
-        apiKey: "AIzaSyBdaBaHIZ1lf5cRCD_XT2cWo-akLUATqUY",
-        authDomain: "st-group-project.firebaseapp.com",
-        databaseURL: "https://st-group-project.firebaseio.com",
-        projectId: "st-group-project",
-        storageBucket: "st-group-project.appspot.com",
-        messagingSenderId: "265360412018"
-    };
-    firebase.initializeApp(config);
+   
 
     // Get element
     const txtEmail = document.getElementById('txtEmail');

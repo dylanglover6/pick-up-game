@@ -18,10 +18,12 @@
     
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   
     <title>Map Page</title>
   </head>
   <body>
+      
     <!-- NavBar -->
     <nav class="navbar navbar-light navbar-style"  style="background-color: #6a9fc2">
         <div style="color:#ec6334">
@@ -29,12 +31,15 @@
         </div>          
       <a class="navbar-brand text-center" href="./login.html" style=" color: #ffb75c; margin-left: 50px; font-family: 'Faster One', cursive;"><h1>HoopNow</h1></a>
       <form class="form-inline">
-        <button type="button" style="background-color: #ec6334; border:#ffb75c; margin: 5px;" id="new-game-btn" class="btn btn-primary">
-          Host a New Game
-        </button> 
+        <button type="button" style="background-color: #ec6334; border:#ffb75c; margin: 5px;" value="off"id="new-game-btn" class="btn btn-primary">
+          Host Game
+        </button>
+        <button type="button" style="background-color: #ec6334; border:#ffb75c; margin: 5px;" value="off"id="find-game" class="btn btn-primary">
+          Find Game
+        </button>
 
         <button type="button" style="background-color: #ec6334; border:#ffb75c margin: 5px;" class="btn btn-primary" data-toggle="modal" data-target="#weatherModal">
-          View Current Weather
+          Weather
         </button>
       </form>
     </nav>
@@ -46,12 +51,13 @@
             <div class="card-header" style="background-color: #6a9fc2">
               <h3 class="card-title" style="color: #ffb75c;">Games In Your Area</h3>
             </div>
-            <div class="card-body" id="google-map">
-                <img src="./assets/images/google-map.jpg" alt="map placeholder">
+            <div class="card-body map-container" id="map" style="height: 500px">
+             
             </div>
           </div>
         </div>
       </div>
+        
     </div>
 
 
@@ -83,8 +89,12 @@
    <script src="https://code.jquery.com/jquery.js"></script>
    <script src="../openweather.js"></script>
    <script src="./assets/javascript/game.js"></script>
-   <script src="app.js"></script>
+   <!--<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>-->
+   <script>
+   </script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdZmNDrlK9dNrcsSlLKh-JIcatCrh3QTk&callback=initMap"
+    async defer></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+   </body>
 </html>
