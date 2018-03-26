@@ -33,9 +33,7 @@ var availableGames=[
 
 
 function initMap() {
-  function empty(){
-    availableGames.length = 0;
-  }
+  
   var gameImage='assets/images/basketballfield.png'
    var hostImgage='assets/images/basketball_ball .png'     
   var markerImage='assets/images/male-2.png'
@@ -50,13 +48,10 @@ function initMap() {
  
   $("#find-game").click(function(){
     for(i=0;i<availableGames.length; i++){
-      nam
+
       var lat=availableGames[i].lat
       var lng=availableGames[i].lng
-      var infowindow = new google.maps.InfoWindow({
-        content: "<h3>"+ name +"</h3>"
-        
-      });
+          
      var markerPos={
        lat: lat,
        lng: lng,
@@ -64,7 +59,7 @@ function initMap() {
      var markers = new google.maps.Marker({
       position: markerPos,
       map: map,
-      title: 'Hello World!',
+      title: name,
       icon: gameImage
     });
       console.log(lat)
@@ -73,39 +68,37 @@ function initMap() {
       
      };
     })
-    
-   
-            // geolocation.
-            if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(function(position) {
-                var pos = {
-                  lat: position.coords.latitude,
-                  lng: position.coords.longitude
-                  
-                };
-                console.log(pos)
-                userCod.push(pos)
-                
-                
-              
-              map.setCenter(pos);
-              var userLocation = new google.maps.Marker({
-                position: userCod[0],
-                map: map,
-                title: 'Hello World!',
-                icon: markerImage
+ // geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
           
-                
-              });
-                
-              }, function() {
-                handleLocationError(true, infoWindow, map.getCenter());
-              });
-            } else {
-              // Browser doesn't support Geolocation
-              handleLocationError(false, infoWindow, map.getCenter());
-            }
-          }
+        };
+        console.log(pos)
+        userCod.push(pos)
+        
+        
+      
+      map.setCenter(pos);
+      var userLocation = new google.maps.Marker({
+        position: userCod[0],
+        map: map,
+        title: 'Hello World!',
+        icon: markerImage
+  
+        
+      });
+        
+      }, function() {
+        handleLocationError(true, infoWindow, map.getCenter());
+      });
+    } else {
+      // Browser doesn't support Geolocation
+      handleLocationError(false, infoWindow, map.getCenter());
+    }
+  }
       $(document).ready(function(){
         //int firebase db
         const config = {

@@ -1,4 +1,4 @@
-    var APIKey = "166a433c57516f51dfab1f7edaed8413";
+    var APIKey = "d72055794df444fbea53f27bc22d5714";
     // default to USA only for now, 
     var city;
     // latitude and longitude placeholders to show weather for Austin  
